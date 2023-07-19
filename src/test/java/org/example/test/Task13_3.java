@@ -1,32 +1,23 @@
 package org.example.test;
 
-import org.example.common.CustomListener;
 import org.example.common.Props;
 import org.example.entity.Gender;
 import org.example.entity.Organization;
-import org.example.entity.Partner;
 import org.example.entity.Task;
-import org.example.pages.BasePage;
 import org.example.pages.HomePage;
-import org.example.pages.LoginPage;
 import org.example.pages.registration.MailHogPage;
 import org.example.pages.registration.SuccessRegistrationPage;
 import org.example.pages.tasks.TaskCategory;
 import org.example.pages.tasks.TaskCreationPage;
 import org.example.pages.tasks.TaskDetailsPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import test_data.RandomData;
-
-import java.text.ParseException;
-import java.util.Date;
 
 import static org.example.common.CustomLogger.logger;
 
-@Listeners(CustomListener.class)
 public class Task13_3 extends BaseTest {
     private String mailHogUrl = "http://185.149.40.46:8025/";
     private String firstName = RandomData.randomFirstOrLastName(8);
@@ -37,7 +28,8 @@ public class Task13_3 extends BaseTest {
     private String organization = RandomData.randomString(10);
     private String positionInOrganization = RandomData.randomString(10);
 
-    @Test(dataProvider = "organizationdata")
+    @ParameterizedTest
+    @MethodSource("organizationData")
     public void registerOrganization(String corporateEmail, String firstName, String lastName, Gender gender,
                                      String password, String confirmPassword,
                                      String organization, String positionInOrganization) {
@@ -52,7 +44,7 @@ public class Task13_3 extends BaseTest {
                 fillInMandatoryFields(newOrganization)
                 .submit();
 
-        Assert.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
+        Assertions.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
                 "Please confirm it.");
 
         //here we go to MailHog and confirm registration
@@ -67,10 +59,11 @@ public class Task13_3 extends BaseTest {
         switchBetweenWindows();
 
         SuccessRegistrationPage successRegistrationPage = new SuccessRegistrationPage(driver);
-        Assert.assertTrue(successRegistrationPage.isInitialized());
-        Assert.assertEquals(successRegistrationPage.getMessage(), "Your email confirmed!");
+        Assertions.assertTrue(successRegistrationPage.isInitialized());
+        Assertions.assertEquals(successRegistrationPage.getMessage(), "Your email confirmed!");
     }
-    @Test(dataProvider = "taskdata")
+    @ParameterizedTest
+    @MethodSource("taskData")
     public void createTask(String name, TaskCategory category, String deadline, String description, String result,
                            String benefit, int savedMoney, int duration1, int duration2) {
 
@@ -84,17 +77,17 @@ public class Task13_3 extends BaseTest {
                 fillMandatoryFields(task).
                 submit();
 
-        Assert.assertEquals(taskDetailsPage.getTaskName(), task.getTaskName());
-        Assert.assertEquals(taskDetailsPage.getTaskDescription(), task.getTaskDescription());
-        Assert.assertEquals(taskDetailsPage.getExpectedResult(), task.getTaskResult());
-        Assert.assertEquals(taskDetailsPage.getVolunteerBenefit(), task.getVolunteerBenefit());
-        Assert.assertEquals(taskDetailsPage.getTaskCategory(), task.getCategory());
-        Assert.assertEquals(taskDetailsPage.getActualUntil(), task.getTaskDeadline());
-        Assert.assertEquals(taskDetailsPage.getTaskDuration(), "Up to month");
+        Assertions.assertEquals(taskDetailsPage.getTaskName(), task.getTaskName());
+        Assertions.assertEquals(taskDetailsPage.getTaskDescription(), task.getTaskDescription());
+        Assertions.assertEquals(taskDetailsPage.getExpectedResult(), task.getTaskResult());
+        Assertions.assertEquals(taskDetailsPage.getVolunteerBenefit(), task.getVolunteerBenefit());
+        Assertions.assertEquals(taskDetailsPage.getTaskCategory(), task.getCategory());
+        Assertions.assertEquals(taskDetailsPage.getActualUntil(), task.getTaskDeadline());
+        Assertions.assertEquals(taskDetailsPage.getTaskDuration(), "Up to month");
     }
-    @DataProvider(name = "organizationdata")
+
     // Create object array with 1 row and 8 columns: first parameter is row and second is column
-    public Object[][] organizationDataFeed() {
+    public static Object[][] organizationData() {
         Object[][] orgData = new Object[1][8];
         int rowCount = 1;
         for (int i = 0; i < rowCount; i++) {
@@ -126,8 +119,7 @@ public class Task13_3 extends BaseTest {
     }
 
     // Create object array with 4 rows and 8 columns: first parameter is row and second is column
-    @DataProvider(name = "taskdata")
-    public Object[][] taskDataFeed() throws ParseException {
+    public static Object[][] taskData() {
         Object[][] taskData = new Object[3][9];
         int rowCount = 3;
         for (int i = 0; i < rowCount; i++) {

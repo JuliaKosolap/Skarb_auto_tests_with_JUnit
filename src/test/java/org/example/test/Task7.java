@@ -2,17 +2,14 @@ package org.example.test;
 
 import org.example.entity.Gender;
 import org.example.entity.Partner;
-import org.example.common.CustomListener;
 import org.example.pages.*;
 import org.example.pages.registration.MailHogPage;
 import org.example.pages.registration.SuccessRegistrationPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import test_data.RandomData;
 import static org.example.common.CustomLogger.logger;
-@Listeners(CustomListener.class)
 public class Task7 extends BaseTest {
 
     private String mailHogUrl = "http://185.149.40.46:8025/";
@@ -50,8 +47,8 @@ public class Task7 extends BaseTest {
         switchBetweenWindows();
 
         SuccessRegistrationPage successRegistrationPage = new SuccessRegistrationPage(driver);
-        Assert.assertTrue(successRegistrationPage.isInitialized());
+        Assertions.assertTrue(successRegistrationPage.isInitialized());
 
-        Assert.assertEquals(successRegistrationPage.getMessage(), "Your email confirmed!");
+        Assertions.assertEquals(successRegistrationPage.getMessage(), "Your email confirmed!");
     }
 }

@@ -1,18 +1,17 @@
 package org.example.test;
 
-import org.example.common.CustomListener;
-import org.example.pages.*;
+import org.example.pages.EntityType;
+import org.example.pages.HomePage;
 import org.example.pages.tasks.PartnerTasksPage;
 import org.example.pages.tasks.VolunteerTasksPage;
 import org.example.setup.BaseTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.example.common.CustomLogger.logger;
 
-@Listeners(CustomListener.class)
+
 public class OptionalTask_CalculateTasksOnLastPage extends BaseTest {
 
     @Test

@@ -1,20 +1,19 @@
 package org.example.test;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 public class EdgeTest {
     private WebDriver driver;
     private String baseUrl = "https://skarb.foxminded.ua/";
 
-    @BeforeMethod
+    @BeforeEach
     public void setUp() {
         driver = new EdgeDriver();
         driver.get(baseUrl);
@@ -22,9 +21,9 @@ public class EdgeTest {
     @Test
     public void goToHomePageTest() {
         WebElement title = driver.findElement(By.cssSelector("h4.text-dark-red"));
-        Assert.assertEquals(title.getText(), "SKARB NGO");
+        Assertions.assertEquals(title.getText(), "SKARB NGO");
     }
-    @AfterMethod
+    @AfterEach
     public void tearDown() {
         if (driver != null) {
             driver.close();

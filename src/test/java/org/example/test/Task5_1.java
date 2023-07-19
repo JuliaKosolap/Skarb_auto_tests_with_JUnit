@@ -1,21 +1,17 @@
 package org.example.test;
 
 import org.example.entity.Volunteer;
-import org.example.common.CustomListener;
 import org.example.pages.HomePage;
 import org.example.pages.registration.RegistrationPage;
 import org.example.pages.registration.SuccessRegistrationPage;
 import org.example.pages.registration.VolunteerCreationPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import test_data.RandomData;
-
 import java.util.List;
-
 import static org.example.common.CustomLogger.logger;
 
-@Listeners(CustomListener.class)
 public class Task5_1 extends BaseTest {
 
     private String firstName = RandomData.randomFirstOrLastName(8);
@@ -34,7 +30,7 @@ public class Task5_1 extends BaseTest {
 
         logger.info("Home page was opened");
         HomePage homePage = new HomePage(driver);
-        Assert.assertTrue(homePage.isInitialized());
+        Assertions.assertTrue(homePage.isInitialized());
 
         logger.info("Registration page was opened");
         RegistrationPage registrationPage = homePage.goToRegistrationPage();
@@ -42,7 +38,7 @@ public class Task5_1 extends BaseTest {
         logger.info("Volunteer creation page was opened");
         registrationPage.goToVolunteerCreationPage();
         VolunteerCreationPage volunteerCreationPage = new VolunteerCreationPage(driver);
-        Assert.assertTrue(volunteerCreationPage.isInitialized());
+        Assertions.assertTrue(volunteerCreationPage.isInitialized());
 
         logger.info("All mandatory fields were filled");
         volunteerCreationPage.fillInMandatoryFields(volunteer);
@@ -50,8 +46,8 @@ public class Task5_1 extends BaseTest {
         logger.info("Submit button was clicked");
         SuccessRegistrationPage successPage = (SuccessRegistrationPage) volunteerCreationPage.submit();
 
-        Assert.assertTrue(successPage.isInitialized());
-        Assert.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
+        Assertions.assertTrue(successPage.isInitialized());
+        Assertions.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
                 "Please confirm it.");
     }
 
@@ -62,7 +58,7 @@ public class Task5_1 extends BaseTest {
 
         logger.info("Home page was opened");
         HomePage homePage = new HomePage(driver);
-        Assert.assertTrue(homePage.isInitialized());
+        Assertions.assertTrue(homePage.isInitialized());
 
         logger.info("Registration page was opened");
         RegistrationPage registrationPage = homePage.goToRegistrationPage();
@@ -70,7 +66,7 @@ public class Task5_1 extends BaseTest {
         logger.info("Volunteer creation page was opened");
         registrationPage.goToVolunteerCreationPage();
         VolunteerCreationPage volunteerCreationPage = new VolunteerCreationPage(driver);
-        Assert.assertTrue(volunteerCreationPage.isInitialized());
+        Assertions.assertTrue(volunteerCreationPage.isInitialized());
 
         logger.info("All mandatory fields were filled");
         volunteerCreationPage.fillInMandatoryFields(volunteerWithInvalidEmail);
@@ -78,7 +74,7 @@ public class Task5_1 extends BaseTest {
         logger.info("Submit button was clicked");
         volunteerCreationPage.submit();
 
-        Assert.assertEquals(volunteerCreationPage.getEmailError(), "Email is incorrect");
+        Assertions.assertEquals(volunteerCreationPage.getEmailError(), "Email is incorrect");
     }
 
     @Test
@@ -92,7 +88,7 @@ public class Task5_1 extends BaseTest {
         logger.info("All error messages on the page were collected");
         List<String> allErrorsOnPage = volunteerCreationPage.getAllErrorsOnPage();
 
-        Assert.assertEquals(allErrorsOnPage.size(), 5);
-        Assert.assertTrue(volunteerCreationPage.checkEmptyFieldsErrors(allErrorsOnPage));
+        Assertions.assertEquals(allErrorsOnPage.size(), 5);
+        Assertions.assertTrue(volunteerCreationPage.checkEmptyFieldsErrors(allErrorsOnPage));
     }
 }

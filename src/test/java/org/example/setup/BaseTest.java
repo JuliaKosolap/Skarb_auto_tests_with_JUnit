@@ -1,14 +1,16 @@
 package org.example.setup;
 
 import org.example.pages.WebDriverSingleton;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import static org.example.common.Props.initProperties;
 import static org.example.common.Props.resetProperties;
 
@@ -17,19 +19,19 @@ public class BaseTest {
     protected static WebDriver driver;
     private String baseUrl = "https://skarb.foxminded.ua/";
 
-    @BeforeClass
+    @BeforeAll
     public static void setUp(){
         driver = WebDriverSingleton.getInstance();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    @BeforeMethod
+    @BeforeEach
     public void testSetUp() throws IOException {
         driver.get(baseUrl);
         driver.manage().window().maximize();
         initProperties();
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDown(){
         resetProperties();
         if (driver != null) {

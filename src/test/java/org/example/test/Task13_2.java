@@ -1,21 +1,20 @@
 package org.example.test;
-import org.example.common.CustomListener;
+
 import org.example.entity.Gender;
 import org.example.entity.Partner;
 import org.example.pages.HomePage;
 import org.example.pages.registration.SuccessRegistrationPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import test_data.RandomData;
 
 import static org.example.common.CustomLogger.logger;
 
-@Listeners(CustomListener.class)
 public class Task13_2 extends BaseTest {
-    @Test(dataProvider = "testdata")
+    @ParameterizedTest
+    @MethodSource("testdata")
     public void createPartner(String email, String firstName, String lastName, Gender gender, String password,
                               String confirmPassword, String organization, String positionInOrganization) {
         logger.info("Data for new partner is generated");
@@ -29,13 +28,12 @@ public class Task13_2 extends BaseTest {
                 fillInMandatoryFields(partner)
                 .submit();
 
-        Assert.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
+        Assertions.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
                 "Please confirm it.");
 
     }
     // Create object array with 4 rows and 8 columns: first parameter is row and second is column
-    @DataProvider(name = "testdata")
-    public Object[][] testDataFeed() {
+    public static Object[][] testdata() {
         Object[][] partnerData = new Object[4][8];
         int rowCount = 4;
         for (int i = 0; i < rowCount; i++) {

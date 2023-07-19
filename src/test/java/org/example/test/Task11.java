@@ -1,14 +1,16 @@
 package org.example.test;
 
-import org.example.common.CustomListener;
-import org.example.pages.*;
+import org.example.pages.EntityType;
+import org.example.pages.HomePage;
+import org.example.pages.PartnerInfoPge;
+import org.example.pages.VolunteerInfoPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import static org.example.common.CustomLogger.logger;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import java.util.List;
-@Listeners(CustomListener.class)
+
+import static org.example.common.CustomLogger.logger;
 
 public class Task11 extends BaseTest {
     private String username = "yavorsk@gmail.com";
@@ -27,7 +29,7 @@ public class Task11 extends BaseTest {
         logger.info("Text searched");
         List<String> searchResult = volunteerInfoPage.search(searchTxt);
 
-        Assert.assertTrue(volunteerInfoPage.isVolunteerFound(searchResult, searchTxt));
+        Assertions.assertTrue(volunteerInfoPage.isVolunteerFound(searchResult, searchTxt));
     }
 
     @Test
@@ -44,6 +46,6 @@ public class Task11 extends BaseTest {
         logger.info("Text searched");
         List<String> searchResult = partnerInfoPge.search(searchTxt);
 
-        Assert.assertTrue(partnerInfoPge.isPartnerFound(searchResult, searchTxt));
+        Assertions.assertTrue(partnerInfoPge.isPartnerFound(searchResult, searchTxt));
     }
 }

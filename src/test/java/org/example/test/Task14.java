@@ -1,7 +1,7 @@
 package org.example.test;
 
 import org.example.common.VolunteerDBService;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.*;
 
 import java.sql.SQLException;
 

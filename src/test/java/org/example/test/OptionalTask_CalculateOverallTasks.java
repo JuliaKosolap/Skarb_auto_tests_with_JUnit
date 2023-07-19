@@ -1,16 +1,14 @@
 package org.example.test;
 
-import org.example.common.CustomListener;
+import org.example.pages.EntityType;
 import org.example.pages.HomePage;
 import org.example.pages.tasks.PartnerTasksPage;
-import org.example.pages.EntityType;
 import org.example.setup.BaseTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-import static org.example.common.CustomLogger.logger;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-@Listeners(CustomListener.class)
+
+import static org.example.common.CustomLogger.logger;
 public class OptionalTask_CalculateOverallTasks extends BaseTest {
 
     @Test

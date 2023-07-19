@@ -1,22 +1,19 @@
 package org.example.test;
 
-import org.example.common.CustomListener;
 import org.example.entity.Volunteer;
 import org.example.pages.HomePage;
 import org.example.pages.registration.SuccessRegistrationPage;
 import org.example.setup.BaseTest;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import test_data.RandomData;
 
 import static org.example.common.CustomLogger.logger;
 
-@Listeners(CustomListener.class)
 public class Task13_1  extends BaseTest {
-   @Test(dataProvider = "testdata")
-
+   @ParameterizedTest
+   @MethodSource("testdata")
     public void createVolunteer(String firstName, String lastName, String email, String phoneNumber,
                                 String password, String confirmPassword) {
        logger.info("Data for new volunteer was generated");
@@ -28,13 +25,12 @@ public class Task13_1  extends BaseTest {
                goToVolunteerCreationPage().
                fillInMandatoryFields(volunteer).submit();
 
-       Assert.assertTrue(successPage.isInitialized());
-       Assert.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
+       Assertions.assertTrue(successPage.isInitialized());
+       Assertions.assertEquals(successPage.getMessage(), "Congratulation! Your registration succeeded! Message was sent to your email. " +
                "Please confirm it.");
    }
     // Create object array with 3 rows and 6 columns: first parameter is row and second is column
-   @DataProvider(name = "testdata")
-    public Object[][] testDataFeed() {
+    public static Object[][] testdata() {
       Object[][] volunteerData = new Object[3][6];
       int rowCount = 3;
       for (int i = 0; i < rowCount; i++) {
