@@ -16,6 +16,7 @@ public class Task13_1  extends BaseTest {
    @MethodSource("testdata")
     public void createVolunteer(String firstName, String lastName, String email, String phoneNumber,
                                 String password, String confirmPassword) {
+       logger.info("------Create Volunteer test was started------");
        logger.info("Data for new volunteer was generated");
        Volunteer volunteer = new Volunteer(firstName, lastName, email, phoneNumber, password, confirmPassword);
 

@@ -17,6 +17,7 @@ public class Task11 extends BaseTest {
     private String password = "PAssword@1";
     @Test
     public void searchForVolunteer() {
+        logger.info("-------Search For Volunteer test was started-------");
         logger.info("Volunteers Info Page was opened");
         VolunteerInfoPage volunteerInfoPage = (VolunteerInfoPage) (new HomePage(driver)).
                 goToLoginPage().
@@ -34,6 +35,7 @@ public class Task11 extends BaseTest {
 
     @Test
     public void searchForPartner() {
+        logger.info("Search For Partner test was started");
         logger.info("Partner Info Page was opened");
         PartnerInfoPge partnerInfoPge = (PartnerInfoPge) (new HomePage(driver)).
                 goToLoginPage().

@@ -5,101 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94568d8c-63ae-40e6-beb8-f61a28a94334" name="Changes" comment="Task 16 is done">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/common/CustomLogger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/common/DBConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/common/Props.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/common/VolunteerDBService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Gender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Organization.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Partner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Task.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Volunteer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/entity/VolunteerDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/helpers/DateTimeHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/AboutUsPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/BasePage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/EntityType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/HelpPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/HomePage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/Language.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/LoginPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/NavigationMenu$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/NavigationMenu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/NewsPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/OrganizationInfoPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/Pagination.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/PartnerInfoPge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/RulesPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/VolunteerInfoPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/WebDriverSingleton.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/entity_search/IEntitySearchStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/entity_search/SearchStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/entity_search/SearchStrategyContext.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/MailHogPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/OrganizationRegistrationPage$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/OrganizationRegistrationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/PartnerCreationPage$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/PartnerCreationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/RegistrationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/SuccessRegistrationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/registration/VolunteerCreationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/PartnerTasksPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/TaskCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/TaskCreationPage$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/TaskCreationPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/TaskDetailsPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/example/pages/tasks/VolunteerTasksPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/test_data/PasswordGeneratingUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/test_data/RandomData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/setup/BaseTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/ChromeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/EdgeTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/FirefoxTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/InternetExplorerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/OptionalTask_CalculateOverallTasks.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/OptionalTask_CalculateTasksOnFivePages.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/OptionalTask_CalculateTasksOnLastPage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/SafariTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task11.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task13_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task13_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task13_3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task14.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task5_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task5_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task5_3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/example/test/Task7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/common/CustomListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/setup/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/setup/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/ChromeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/EdgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/EdgeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/FirefoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/FirefoxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/InternetExplorerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/InternetExplorerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateOverallTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateOverallTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateTasksOnFivePages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateTasksOnFivePages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateTasksOnLastPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/OptionalTask_CalculateTasksOnLastPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/SafariTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/SafariTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task11.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task13_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task14.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task5_3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test/Task7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/test/Task7.java" afterDir="false" />
     </list>
@@ -172,7 +82,7 @@
       <recent name="common" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Task7">
+  <component name="RunManager" selected="JUnit.Task7.createPartnerWithValidValues">
     <configuration name="Task11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skarb-wd-automation" />
       <extension name="coverage">
@@ -218,21 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Task13_3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="skarb-wd-automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.test" />
-      <option name="MAIN_CLASS_NAME" value="org.example.test.Task13_3" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Task7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="skarb-wd-automation" />
       <extension name="coverage">
@@ -248,13 +143,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task7.createPartnerWithValidValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="skarb-wd-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.test" />
+      <option name="MAIN_CLASS_NAME" value="org.example.test.Task7" />
+      <option name="METHOD_NAME" value="createPartnerWithValidValues" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Task7.createPartnerWithValidValues" />
         <item itemvalue="JUnit.Task7" />
         <item itemvalue="JUnit.Task11" />
         <item itemvalue="JUnit.Task13_1" />
         <item itemvalue="JUnit.Task13_2" />
-        <item itemvalue="JUnit.Task13_3" />
       </list>
     </recent_temporary>
   </component>
@@ -505,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689660134689</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Task 16 is done">
+      <created>1689785994615</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1689785994615</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -520,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed navigation" />
     <MESSAGE value="Task6" />
     <MESSAGE value="Button name corrected" />
     <MESSAGE value="Task7 implemented" />
@@ -545,7 +462,8 @@
     <MESSAGE value="Task 14 in progress" />
     <MESSAGE value="Task 14 v1 reverted" />
     <MESSAGE value="Extra code was deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extra code was deleted" />
+    <MESSAGE value="Task 16 is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 16 is done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -567,12 +485,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/test/Task11.java</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/test/Task13_3.java</url>
-          <line>84</line>
+          <line>86</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

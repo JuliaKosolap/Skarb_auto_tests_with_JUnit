@@ -17,6 +17,7 @@ public class Task13_2 extends BaseTest {
     @MethodSource("testdata")
     public void createPartner(String email, String firstName, String lastName, Gender gender, String password,
                               String confirmPassword, String organization, String positionInOrganization) {
+        logger.info("-------Create Partner test was started--------");
         logger.info("Data for new partner is generated");
         Partner partner = new Partner(email, firstName, lastName, gender, password, confirmPassword,
                 organization, positionInOrganization );

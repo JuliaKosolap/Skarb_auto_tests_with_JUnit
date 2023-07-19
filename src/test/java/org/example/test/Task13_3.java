@@ -28,11 +28,13 @@ public class Task13_3 extends BaseTest {
     private String organization = RandomData.randomString(10);
     private String positionInOrganization = RandomData.randomString(10);
 
+
     @ParameterizedTest
     @MethodSource("organizationData")
     public void registerOrganization(String corporateEmail, String firstName, String lastName, Gender gender,
                                      String password, String confirmPassword,
                                      String organization, String positionInOrganization) {
+        logger.info("------Register Organization test was started-------");
         logger.info("Data for new organization is generated");
         Organization newOrganization = new Organization(corporateEmail, firstName, lastName, gender, password, confirmPassword,
                 organization, positionInOrganization );
@@ -68,7 +70,7 @@ public class Task13_3 extends BaseTest {
                            String benefit, int savedMoney, int duration1, int duration2) {
 
         Task task = new Task(name, category, deadline, description, result, benefit, savedMoney, duration1, duration2);
-
+        logger.info("-----Create Task test was started------");
         TaskDetailsPage taskDetailsPage = (TaskDetailsPage) new HomePage(driver).
                 goToLoginPage().
                 login(Props.organizationLogin,

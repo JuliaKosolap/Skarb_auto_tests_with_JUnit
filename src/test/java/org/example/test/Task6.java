@@ -24,6 +24,7 @@ public class Task6 extends BaseTest {
     //This test creates a partner with valid values and verifies if success message appeared
     @Test
     public void createPartnerWithValidValues() {
+        logger.info("--------Create Partner With Valid Values was started-------");
         logger.info("Data for new partner is generated");
         Partner partner = new Partner(email, firstName, lastName, Gender.FEMALE, password, confirmPassword, organization, positionInOrganization);
 
